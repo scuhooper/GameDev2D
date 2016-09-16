@@ -11,16 +11,6 @@ public class BasicMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        //if ( Input.GetKey( KeyCode.A ) )
-        //{
-        //    transform.position += new Vector3( -.1f, 0, 0 );
-        //    Debug.Log( this.name + " is moving left." );
-        //}
-        //if ( Input.GetKey( KeyCode.D ) )
-        //{
-        //    transform.position += new Vector3( .1f, 0, 0 );
-        //    Debug.Log( this.name + " is moving right." );
-        //}
         if ( Input.GetKey( KeyCode.A ) )
         {
             transform.position += new Vector3( 0, .1f, 0 );
@@ -39,6 +29,8 @@ public class BasicMovement : MonoBehaviour {
 
 	void Fire()
 	{
-		GameObject newLaser = ( GameObject )Instantiate( laser, transform.position, transform.rotation );
+		// instantiate two separate lasers off the end of each weapon on ship
+		GameObject LeftLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3(.76f, .254f, 0), transform.rotation );
+		GameObject RightLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, -.254f, 0 ), transform.rotation );
 	}
 }
