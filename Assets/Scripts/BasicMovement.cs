@@ -3,10 +3,12 @@ using System.Collections;
 
 public class BasicMovement : MonoBehaviour {
 	public GameObject laser;
+	public float rateOfFire = 5;
+	float timeLastFired;
 
 	// Use this for initialization
 	void Start () {
-	
+		timeLastFired = float.MinValue;
 	}
 	
 	// Update is called once per frame
@@ -29,8 +31,12 @@ public class BasicMovement : MonoBehaviour {
 
 	void Fire()
 	{
-		// instantiate two separate lasers off the end of each weapon on ship
-		GameObject LeftLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3(.76f, .254f, 0), transform.rotation );
-		GameObject RightLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, -.254f, 0 ), transform.rotation );
+		if ( Time.time - timeLastFired > 1 / rateOfFire )
+		{
+			// instantiate two separate lasers off the end of each weapon on ship
+			GameObject LeftLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, .254f, 0 ), transform.rotation );
+			GameObject RightLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, -.254f, 0 ), transform.rotation );
+			timeLastFired = Time.time;
+		}
 	}
 }

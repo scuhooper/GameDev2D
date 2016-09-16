@@ -21,4 +21,14 @@ public class Laser : MonoBehaviour {
 			Destroy( gameObject );
 		}
 	}
+
+	void OnCollisionEnter2D( Collision2D coll )
+	{
+		Debug.Log( "Collision with Laser" );
+		if ( coll.gameObject.tag == "Enemy" )
+		{
+			coll.gameObject.SendMessage( "TakeDamage", damage );
+		}
+		Destroy( gameObject );
+	}
 }
