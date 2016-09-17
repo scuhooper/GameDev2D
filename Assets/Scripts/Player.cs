@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BasicMovement : MonoBehaviour {
+public class Player : MonoBehaviour {
 	public GameObject laser;
 	public float rateOfFire = 5;
 	float timeLastFired;
@@ -37,6 +37,15 @@ public class BasicMovement : MonoBehaviour {
 			GameObject LeftLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, .254f, 0 ), transform.rotation );
 			GameObject RightLaser = ( GameObject )Instantiate( laser, transform.position + new Vector3( .76f, -.254f, 0 ), transform.rotation );
 			timeLastFired = Time.time;
+		}
+	}
+
+	void OnCollisionEnter2D( Collision2D coll )
+	{
+		if ( coll.gameObject.tag == "Enemy" )
+		{
+			Debug.Log( "Player crashed with " + coll.gameObject.name.ToString() );
+			Destroy( gameObject );
 		}
 	}
 }

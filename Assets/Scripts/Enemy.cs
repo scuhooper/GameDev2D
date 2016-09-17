@@ -6,9 +6,11 @@ public class Enemy : MonoBehaviour {
 	public float speed = 5;
 	public int pointsWorth = 25;
 
+	float spawnTime = float.MinValue;
+
 	// Use this for initialization
 	void Start () {
-		
+		spawnTime = Time.time;
 	}
 	
 	// Update is called once per frame
@@ -26,5 +28,12 @@ public class Enemy : MonoBehaviour {
 			game.SendMessage( "UpdateScore", pointsWorth );
 			game.currentNumberOfEnemies--;
 		}
+	}
+
+	void OnTriggerEnter2D()
+	{
+		ViscountessGame game = FindObjectOfType<ViscountessGame>();
+		game.currentNumberOfEnemies--;
+		Destroy( gameObject );
 	}
 }
