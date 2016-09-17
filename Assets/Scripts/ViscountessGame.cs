@@ -8,10 +8,14 @@ public class ViscountessGame : MonoBehaviour {
 	float timeLastSpawned;
 	Quaternion quat;
 	Collider2D col;
+	float lastPowerUp;
+	float nextPowerUp;
 
 	public int maxNumberOfEnemies;
 	public bool isPaused;
 	public float timeSurvived;
+	public float minPowerUpDelay;
+	public float maxPowerUpDelay;
 	public int score;
 	public int currentNumberOfEnemies;
 	public GameObject[] enemy = new GameObject[10];
@@ -22,10 +26,10 @@ public class ViscountessGame : MonoBehaviour {
 	public Text finalScoreText;
 	public Text finalTimeText;
 	public GameObject pauseScreen;
-	public AudioSource expSource;
-	public AudioClip explosion;
 	public GameObject GameOverScreen;
 	public GameObject gameRunningScreen;
+	public GameObject powerUp;
+	public GameObject player;
 
 	// Use this for initialization
 	void Start () {
@@ -49,6 +53,11 @@ public class ViscountessGame : MonoBehaviour {
 			{
 				OnPauseGame();
 			}
+
+			if ( Time.time > lastPowerUp + nextPowerUp )
+			{
+				SpawnPowerUp();
+			}
 		}
 	}
 
@@ -64,12 +73,15 @@ public class ViscountessGame : MonoBehaviour {
 		pauseScreen.SetActive( false );
 		GameOverScreen.SetActive( false );
 		isPaused = false;
+		minPowerUpDelay = 3;
+		maxPowerUpDelay = 10;
+		lastPowerUp = Time.time;
+		nextPowerUp = UnityEngine.Random.Range( minPowerUpDelay, maxPowerUpDelay );
 	}
 
-		void UpdateScore( int points )
+	void UpdateScore( int points )
 	{
 		score += points;
-		ShipDestroyed();
 	}
 
 	void SpawnEnemy()
@@ -117,8 +129,13 @@ public class ViscountessGame : MonoBehaviour {
 		SceneManager.LoadScene( "Main Menu" );
 	}
 
-	void ShipDestroyed()
+	void SpawnPowerUp()
 	{
-		expSource.Play();
+		GameObject newPowerUp = ( GameObject )Instantiate( powerUp,
+			new Vector3( UnityEngine.Random.Range( col.bounds.min.x, col.bounds.max.x ),
+			UnityEngine.Random.Range( col.bounds.min.y, col.bounds.max.y ), 0 ),
+			new Quaternion( 0, 0, 0, 0 ) );
+		nextPowerUp = UnityEngine.Random.Range( minPowerUpDelay, maxPowerUpDelay );
+		lastPowerUp = Time.time;
 	}
 }

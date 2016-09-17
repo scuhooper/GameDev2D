@@ -8,6 +8,7 @@ public class Enemy : MonoBehaviour {
 
 	Animator anim;
 	bool explode;
+	AudioSource source;
 	// Use this for initialization
 	void Start () {
 		health = 100;
@@ -16,6 +17,7 @@ public class Enemy : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		anim.SetBool( "isDestroyed", false );
 		explode = false;
+		source = GetComponent<AudioSource>();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +37,7 @@ public class Enemy : MonoBehaviour {
 			ViscountessGame game = FindObjectOfType<ViscountessGame>();
 			game.SendMessage( "UpdateScore", pointsWorth );
 			game.currentNumberOfEnemies--;
+			source.Play();
 			Destroy( gameObject, 1 );
 		}
 	}
