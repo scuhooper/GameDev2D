@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour {
 	
 	}
 
+	// button click functions
 	public void OnPlayGameClicked()
 	{
 		SceneManager.LoadScene( "Level1" );
