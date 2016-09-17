@@ -3,29 +3,40 @@ using System.Collections;
 
 public class Player : MonoBehaviour {
 	public GameObject laser;
-	public float rateOfFire = 5;
+	public float rateOfFire;
+
+	AudioSource source;
 	float timeLastFired;
+	ViscountessGame game;
+	bool gameOver;
 
 	// Use this for initialization
 	void Start () {
+		rateOfFire = 5;
 		timeLastFired = float.MinValue;
+		game = FindObjectOfType<ViscountessGame>();
+		source = GetComponent<AudioSource>();
+		gameOver = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-        if ( Input.GetKey( KeyCode.A ) )
-        {
-            transform.position += new Vector3( 0, .1f, 0 );
-            Debug.Log( name + " is moving up." );
-        }
-        if ( Input.GetKey( KeyCode.D ) )
-        {
-            transform.position += new Vector3( 0, -.1f, 0 );
-            Debug.Log( name + " is moving down" );
-        }
-		if ( Input.GetMouseButton( 0 ) )
+		if ( !game.isPaused && !gameOver )
 		{
-			Fire();
+			if ( Input.GetKey( KeyCode.A ) )
+			{
+				transform.position += new Vector3( 0, .1f, 0 );
+				Debug.Log( name + " is moving up." );
+			}
+			if ( Input.GetKey( KeyCode.D ) )
+			{
+				transform.position += new Vector3( 0, -.1f, 0 );
+				Debug.Log( name + " is moving down" );
+			}
+			if ( Input.GetMouseButton( 0 ) )
+			{
+				Fire();
+			}
 		}
     }
 
@@ -44,8 +55,10 @@ public class Player : MonoBehaviour {
 	{
 		if ( coll.gameObject.tag == "Enemy" )
 		{
+			source.Play();
 			Debug.Log( "Player crashed with " + coll.gameObject.name.ToString() );
-			Destroy( gameObject );
+			game.GameOver();
+			gameOver = true;
 		}
 	}
 }

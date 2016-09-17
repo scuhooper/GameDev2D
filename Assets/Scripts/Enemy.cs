@@ -2,20 +2,26 @@
 using System.Collections;
 
 public class Enemy : MonoBehaviour {
-	public int health = 100;
-	public float speed = 5;
-	public int pointsWorth = 25;
+	public int health;
+	public float speed;
+	public int pointsWorth;
 
-	float spawnTime = float.MinValue;
-
+	Animator anim;
+	bool explode;
 	// Use this for initialization
 	void Start () {
-		spawnTime = Time.time;
+		health = 100;
+		speed = 5;
+		pointsWorth = 25;
+		anim = GetComponent<Animator>();
+		anim.SetBool( "isDestroyed", false );
+		explode = false;
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		transform.Translate( new Vector3( -speed * Time.deltaTime, 0, 0 ) );
+		if (!explode)
+			transform.Translate( new Vector3( -speed * Time.deltaTime, 0, 0 ) );
 	}
 
 	void TakeDamage( int dmg )
@@ -23,10 +29,13 @@ public class Enemy : MonoBehaviour {
 		health -= dmg;
 		if ( health <= 0 )
 		{
-			Destroy( gameObject );
+			anim.SetBool( "isDestroyed", true );
+			GetComponent<Collider2D>().enabled = false;
+			explode = true;
 			ViscountessGame game = FindObjectOfType<ViscountessGame>();
 			game.SendMessage( "UpdateScore", pointsWorth );
 			game.currentNumberOfEnemies--;
+			Destroy( gameObject, 1 );
 		}
 	}
 

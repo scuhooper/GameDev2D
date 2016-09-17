@@ -2,15 +2,18 @@
 using System.Collections;
 
 public class Laser : MonoBehaviour {
-	public float speed = 1;
-	public int lifetime = 2;
-	public int damage = 25;
+	public float speed;
+	public int lifetime;
+	public int damage;
 
 	float spawnTime;
 
 	// Use this for initialization
 	void Start () {
 		spawnTime = Time.time;
+		speed = 10;
+		lifetime = 2;
+		damage = 25;
 	}
 	
 	// Update is called once per frame
