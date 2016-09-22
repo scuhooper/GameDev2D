@@ -1,0 +1,1963 @@
+fileFormatVersion: 2
+guid: e6b0c6c86feca874abd1077e7dcdc7d6
+timeCreated: 1474570527
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerSpritesheet_0
+    21300002: PlayerSpritesheet_1
+    21300004: PlayerSpritesheet_2
+    21300006: PlayerSpritesheet_3
+    21300008: PlayerSpritesheet_4
+    21300010: PlayerSpritesheet_5
+    21300012: PlayerSpritesheet_6
+    21300014: PlayerSpritesheet_7
+    21300016: PlayerSpritesheet_8
+    21300018: PlayerSpritesheet_9
+    21300020: PlayerSpritesheet_10
+    21300022: PlayerSpritesheet_11
+    21300024: PlayerSpritesheet_12
+    21300026: PlayerSpritesheet_13
+    21300028: PlayerSpritesheet_14
+    21300030: PlayerSpritesheet_15
+    21300032: PlayerSpritesheet_16
+    21300034: PlayerSpritesheet_17
+    21300036: PlayerSpritesheet_18
+    21300038: PlayerSpritesheet_19
+    21300040: PlayerSpritesheet_20
+    21300042: PlayerSpritesheet_21
+    21300044: PlayerSpritesheet_22
+    21300046: PlayerSpritesheet_23
+    21300048: PlayerSpritesheet_24
+    21300050: PlayerSpritesheet_25
+    21300052: PlayerSpritesheet_26
+    21300054: PlayerSpritesheet_27
+    21300056: PlayerSpritesheet_28
+    21300058: PlayerSpritesheet_29
+    21300060: PlayerSpritesheet_30
+    21300062: PlayerSpritesheet_31
+    21300064: PlayerSpritesheet_32
+    21300066: PlayerSpritesheet_33
+    21300068: PlayerSpritesheet_34
+    21300070: PlayerSpritesheet_35
+    21300072: PlayerSpritesheet_36
+    21300074: PlayerSpritesheet_37
+    21300076: PlayerSpritesheet_38
+    21300078: PlayerSpritesheet_39
+    21300080: PlayerSpritesheet_40
+    21300082: PlayerSpritesheet_41
+    21300084: PlayerSpritesheet_42
+    21300086: PlayerSpritesheet_43
+    21300088: PlayerSpritesheet_44
+    21300090: PlayerSpritesheet_45
+    21300092: PlayerSpritesheet_46
+    21300094: PlayerSpritesheet_47
+    21300096: PlayerSpritesheet_48
+    21300098: PlayerSpritesheet_49
+    21300100: PlayerSpritesheet_50
+    21300102: PlayerSpritesheet_51
+    21300104: PlayerSpritesheet_52
+    21300106: PlayerSpritesheet_53
+    21300108: PlayerSpritesheet_54
+    21300110: PlayerSpritesheet_55
+    21300112: PlayerSpritesheet_56
+    21300114: PlayerSpritesheet_57
+    21300116: PlayerSpritesheet_58
+    21300118: PlayerSpritesheet_59
+    21300120: PlayerSpritesheet_60
+    21300122: PlayerSpritesheet_61
+    21300124: PlayerSpritesheet_62
+    21300126: PlayerSpritesheet_63
+    21300128: PlayerSpritesheet_64
+    21300130: PlayerSpritesheet_65
+    21300132: PlayerSpritesheet_66
+    21300134: PlayerSpritesheet_67
+    21300136: PlayerSpritesheet_68
+    21300138: PlayerSpritesheet_69
+    21300140: PlayerSpritesheet_70
+    21300142: PlayerSpritesheet_71
+    21300144: PlayerSpritesheet_72
+    21300146: PlayerSpritesheet_73
+    21300148: PlayerSpritesheet_74
+    21300150: PlayerSpritesheet_75
+    21300152: PlayerSpritesheet_76
+    21300154: PlayerSpritesheet_77
+    21300156: PlayerSpritesheet_78
+    21300158: PlayerSpritesheet_79
+    21300160: PlayerSpritesheet_80
+    21300162: PlayerSpritesheet_81
+    21300164: PlayerSpritesheet_82
+    21300166: PlayerSpritesheet_83
+    21300168: PlayerSpritesheet_84
+    21300170: PlayerSpritesheet_85
+    21300172: PlayerSpritesheet_86
+    21300174: PlayerSpritesheet_87
+    21300176: PlayerSpritesheet_88
+    21300178: PlayerSpritesheet_89
+    21300180: PlayerSpritesheet_90
+    21300182: PlayerSpritesheet_91
+    21300184: PlayerSpritesheet_92
+    21300186: PlayerSpritesheet_93
+    21300188: PlayerSpritesheet_94
+    21300190: PlayerSpritesheet_95
+    21300192: PlayerSpritesheet_96
+    21300194: PlayerSpritesheet_97
+    21300196: PlayerSpritesheet_98
+    21300198: PlayerSpritesheet_99
+    21300200: PlayerSpritesheet_100
+    21300202: PlayerSpritesheet_101
+    21300204: PlayerSpritesheet_102
+    21300206: PlayerSpritesheet_103
+    21300208: PlayerSpritesheet_104
+    21300210: PlayerSpritesheet_105
+    21300212: PlayerSpritesheet_106
+    21300214: PlayerSpritesheet_107
+    21300216: PlayerSpritesheet_108
+    21300218: PlayerSpritesheet_109
+    21300220: PlayerSpritesheet_110
+    21300222: PlayerSpritesheet_111
+    21300224: PlayerSpritesheet_112
+    21300226: PlayerSpritesheet_113
+    21300228: PlayerSpritesheet_114
+    21300230: PlayerSpritesheet_115
+    21300232: PlayerSpritesheet_116
+    21300234: PlayerSpritesheet_117
+    21300236: PlayerSpritesheet_118
+    21300238: PlayerSpritesheet_119
+    21300240: PlayerSpritesheet_120
+    21300242: PlayerSpritesheet_121
+    21300244: PlayerSpritesheet_122
+    21300246: PlayerSpritesheet_123
+    21300248: PlayerSpritesheet_124
+    21300250: PlayerSpritesheet_125
+    21300252: PlayerSpritesheet_126
+    21300254: PlayerSpritesheet_127
+    21300256: PlayerSpritesheet_128
+    21300258: PlayerSpritesheet_129
+    21300260: PlayerSpritesheet_130
+    21300262: PlayerSpritesheet_131
+    21300264: PlayerSpritesheet_132
+    21300266: PlayerSpritesheet_133
+    21300268: PlayerSpritesheet_134
+    21300270: PlayerSpritesheet_135
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlayerSpritesheet_0
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 533
+        width: 16
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 527
+        width: 11
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_2
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 510
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_3
+      rect:
+        serializedVersion: 2
+        x: 237
+        y: 510
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_4
+      rect:
+        serializedVersion: 2
+        x: 282
+        y: 510
+        width: 34
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 510
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 371
+        y: 510
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 510
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 501
+        width: 16
+        height: 14
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 462
+        width: 31
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_10
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 462
+        width: 33
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_11
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 462
+        width: 37
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_12
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 463
+        width: 39
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_13
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 463
+        width: 32
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_14
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 463
+        width: 27
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_15
+      rect:
+        serializedVersion: 2
+        x: 344
+        y: 463
+        width: 28
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_16
+      rect:
+        serializedVersion: 2
+        x: 380
+        y: 463
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_17
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 462
+        width: 34
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_18
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 462
+        width: 38
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_19
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 462
+        width: 34
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_20
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 408
+        width: 35
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_21
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 407
+        width: 31
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_22
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 406
+        width: 28
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_23
+      rect:
+        serializedVersion: 2
+        x: 196
+        y: 406
+        width: 30
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_24
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 406
+        width: 30
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_25
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 406
+        width: 36
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_26
+      rect:
+        serializedVersion: 2
+        x: 316
+        y: 405
+        width: 33
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_27
+      rect:
+        serializedVersion: 2
+        x: 357
+        y: 406
+        width: 33
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_28
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 406
+        width: 33
+        height: 47
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_29
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 406
+        width: 33
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_30
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 403
+        width: 34
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_31
+      rect:
+        serializedVersion: 2
+        x: 517
+        y: 403
+        width: 37
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_32
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 411
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_33
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 411
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_34
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 412
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_35
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 352
+        width: 25
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_36
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 352
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_37
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 352
+        width: 31
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 352
+        width: 29
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_39
+      rect:
+        serializedVersion: 2
+        x: 178
+        y: 352
+        width: 23
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_40
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 352
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_41
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 352
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_42
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 352
+        width: 22
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_43
+      rect:
+        serializedVersion: 2
+        x: 294
+        y: 353
+        width: 31
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_44
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 353
+        width: 40
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_45
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 353
+        width: 40
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_46
+      rect:
+        serializedVersion: 2
+        x: 439
+        y: 353
+        width: 40
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_47
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 353
+        width: 40
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_48
+      rect:
+        serializedVersion: 2
+        x: 537
+        y: 352
+        width: 33
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_49
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 352
+        width: 34
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_50
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 357
+        width: 32
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_51
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 357
+        width: 30
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_52
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 296
+        width: 35
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_53
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 297
+        width: 31
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_54
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 298
+        width: 31
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_55
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 298
+        width: 30
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_56
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 298
+        width: 32
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_57
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 298
+        width: 34
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_58
+      rect:
+        serializedVersion: 2
+        x: 287
+        y: 299
+        width: 26
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_59
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 299
+        width: 31
+        height: 43
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_60
+      rect:
+        serializedVersion: 2
+        x: 358
+        y: 302
+        width: 28
+        height: 40
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_61
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 301
+        width: 32
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_62
+      rect:
+        serializedVersion: 2
+        x: 433
+        y: 301
+        width: 31
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_63
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 301
+        width: 39
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_64
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 300
+        width: 39
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_65
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 300
+        width: 39
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_66
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 301
+        width: 50
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_67
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 300
+        width: 47
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_68
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 220
+        width: 25
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_69
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 213
+        width: 22
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_70
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 222
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_71
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 222
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_72
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 215
+        width: 22
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_73
+      rect:
+        serializedVersion: 2
+        x: 182
+        y: 221
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_74
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 222
+        width: 25
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_75
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 237
+        width: 24
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_76
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 248
+        width: 25
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_77
+      rect:
+        serializedVersion: 2
+        x: 325
+        y: 239
+        width: 38
+        height: 41
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_78
+      rect:
+        serializedVersion: 2
+        x: 369
+        y: 241
+        width: 35
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_79
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 239
+        width: 33
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_80
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 239
+        width: 33
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_81
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 239
+        width: 34
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_82
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 239
+        width: 34
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_83
+      rect:
+        serializedVersion: 2
+        x: 623
+        y: 245
+        width: 46
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_84
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 244
+        width: 46
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_85
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 136
+        width: 43
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_86
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 136
+        width: 44
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_87
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 136
+        width: 43
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_88
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 136
+        width: 43
+        height: 62
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_89
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 165
+        width: 41
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_90
+      rect:
+        serializedVersion: 2
+        x: 331
+        y: 164
+        width: 51
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_91
+      rect:
+        serializedVersion: 2
+        x: 394
+        y: 156
+        width: 33
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_92
+      rect:
+        serializedVersion: 2
+        x: 445
+        y: 158
+        width: 41
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_93
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 153
+        width: 45
+        height: 44
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_94
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 156
+        width: 47
+        height: 38
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_95
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 180
+        width: 42
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_96
+      rect:
+        serializedVersion: 2
+        x: 678
+        y: 178
+        width: 43
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_97
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 136
+        width: 30
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_98
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 135
+        width: 6
+        height: 9
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_99
+      rect:
+        serializedVersion: 2
+        x: 560
+        y: 136
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_100
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 137
+        width: 9
+        height: 6
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_101
+      rect:
+        serializedVersion: 2
+        x: 585
+        y: 136
+        width: 7
+        height: 7
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_102
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 115
+        width: 42
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_103
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 116
+        width: 42
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_104
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 85
+        width: 37
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_105
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 85
+        width: 32
+        height: 27
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_106
+      rect:
+        serializedVersion: 2
+        x: 351
+        y: 85
+        width: 31
+        height: 28
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_107
+      rect:
+        serializedVersion: 2
+        x: 387
+        y: 85
+        width: 32
+        height: 34
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_108
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 85
+        width: 34
+        height: 39
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_109
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 85
+        width: 24
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_110
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 85
+        width: 22
+        height: 42
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_111
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 107
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_112
+      rect:
+        serializedVersion: 2
+        x: 557
+        y: 107
+        width: 10
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_113
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 107
+        width: 12
+        height: 12
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_114
+      rect:
+        serializedVersion: 2
+        x: 584
+        y: 108
+        width: 12
+        height: 10
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_115
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 85
+        width: 50
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_116
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 85
+        width: 50
+        height: 16
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_117
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 85
+        width: 50
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_118
+      rect:
+        serializedVersion: 2
+        x: 174
+        y: 85
+        width: 48
+        height: 18
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_119
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 86
+        width: 40
+        height: 20
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_120
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 88
+        width: 22
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_121
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 88
+        width: 21
+        height: 8
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_122
+      rect:
+        serializedVersion: 2
+        x: 689
+        y: 68
+        width: 21
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_123
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 28
+        width: 48
+        height: 31
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_124
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 29
+        width: 53
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_125
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 29
+        width: 39
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_126
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 30
+        width: 42
+        height: 37
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_127
+      rect:
+        serializedVersion: 2
+        x: 245
+        y: 30
+        width: 50
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_128
+      rect:
+        serializedVersion: 2
+        x: 311
+        y: 31
+        width: 56
+        height: 30
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_129
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 28
+        width: 37
+        height: 36
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_130
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 28
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_131
+      rect:
+        serializedVersion: 2
+        x: 493
+        y: 29
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_132
+      rect:
+        serializedVersion: 2
+        x: 541
+        y: 29
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_133
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 31
+        width: 37
+        height: 35
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_134
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 40
+        width: 16
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: PlayerSpritesheet_135
+      rect:
+        serializedVersion: 2
+        x: 696
+        y: 10
+        width: 21
+        height: 15
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
