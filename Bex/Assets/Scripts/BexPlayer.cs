@@ -4,11 +4,13 @@ using System.Collections;
 public class BexPlayer : MonoBehaviour {
 	public float speed;
 	public float jumpForce;
+	public float dashSpeed;
 
 	Rigidbody2D rb;
 	Animator anim;
 	bool bIsFacingRight;
 	bool bIsGrounded;
+	bool bIsDashing;
 	Vector2 newVelocity;
 
 	// Use this for initialization
@@ -27,70 +29,94 @@ public class BexPlayer : MonoBehaviour {
 		anim = GetComponent<Animator>();
 		bIsFacingRight = true;
 		bIsGrounded = true;
+		bIsDashing = false;
 	}
 
 	void MoveCharacter()
 	{
-		//newVelocity = rb.velocity;
+		// handle input for moving
 		if ( Input.GetKey( KeyCode.A ) )
 		{
+			// flip the sprite if we start moving left and are facing right
 			if ( bIsFacingRight )
 				FlipSprite();
 
 			rb.AddForce( new Vector2( -speed, 0 ) );
-			// rb.MovePosition( new Vector3( -speed * Time.deltaTime, 0, 0 ) + transform.position );
-			anim.SetBool( "bIsMoving", true );
+			anim.SetBool( "bIsMoving", true );	// start the animator to show movement
 		}
 		else if ( Input.GetKey( KeyCode.D ) )
 		{
+			// flip the sprite if we start moving right and are facing left
 			if ( !bIsFacingRight )
 				FlipSprite();
 
 			rb.AddForce( new Vector2( speed, 0 ) );
-			//rb.MovePosition( new Vector3( speed * Time.deltaTime, 0, 0 ) + transform.position );
-			anim.SetBool( "bIsMoving", true );
+			anim.SetBool( "bIsMoving", true );  // start the animator to show movement
 		}
 		else
 		{
-			anim.SetBool( "bIsMoving", false );
+			anim.SetBool( "bIsMoving", false ); // tell animator we are no longer moving
 		}
 
+		// special movements
 		if ( Input.GetKeyDown( KeyCode.Space ) )
 		{
 			Jump();
 		}
 
-		//rb.velocity = newVelocity;
+		if ( Input.GetKeyDown( KeyCode.LeftShift ) && bIsGrounded && !bIsDashing )
+		{
+			Dash();
+		}
 	}
 
 	void Jump()
 	{
+		// check to see if character is on the ground
 		if ( bIsGrounded )
 		{
-			rb.AddForce( new Vector2( 0, jumpForce ) );
-			anim.SetBool( "bIsJumping", true );
+			rb.AddForce( new Vector2( 0, jumpForce ) );	// apply the jumpforce
+			anim.SetBool( "bIsJumping", true );	// start the animation for jumping
 		}
 	}
 
+	void Dash()
+	{
+		if ( bIsFacingRight )
+		{
+			rb.AddForce( new Vector2( dashSpeed, 0 ) );
+			anim.SetBool( "bIsDashing", true );
+			bIsDashing = true;
+			Invoke( "IsDashing", .5f );
+		}
+		else
+		{
+			rb.AddForce( new Vector2( -dashSpeed, 0 ) );
+			anim.SetBool( "bIsDashing", true );
+			bIsDashing = true;
+			Invoke( "IsDashing", .5f );
+		}
+	}
+	// make sure sprite faces the direction moving
 	void FlipSprite()
 	{
-		Vector3 newScale = transform.localScale;
-		newScale.x *= -1;
-		transform.localScale = newScale;
-		bIsFacingRight = !bIsFacingRight;
+		if ( bIsFacingRight )	// if we are facing right, we need to change
+			GetComponent<SpriteRenderer>().flipX = true;
+		else
+			GetComponent<SpriteRenderer>().flipX = false;	// turn back to the right
+		bIsFacingRight = !bIsFacingRight;	// switch the bool back and forth everytime the function is called
 	}
 
-	void OnCollisionEnter2D( Collision2D col )
+	public void SetIsGrounded( bool val )
 	{
-		if ( col.gameObject.CompareTag( "Ground" ) )
-		{
-			bIsGrounded = true;
+		bIsGrounded = val;
+		if ( bIsGrounded )	// if we are on the ground, make sure animator knows we are no longer jumping
 			anim.SetBool( "bIsJumping", false );
-		}
 	}
 
-	void OnCollisionExit2D( Collision2D col )
+	void IsDashing()
 	{
-		bIsGrounded = false;
+		anim.SetBool( "bIsDashing", false );
+		bIsDashing = false;
 	}
 }
