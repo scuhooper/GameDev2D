@@ -9,8 +9,11 @@ public class BexPlayer : MonoBehaviour {
 	Rigidbody2D rb;
 	Animator anim;
 	bool bIsFacingRight;
+	bool bIsMoving;
 	bool bIsGrounded;
 	bool bIsDashing;
+	bool bIsShooting;
+	bool bIsKicking;
 	Vector2 newVelocity;
 
 	// Use this for initialization
@@ -28,8 +31,11 @@ public class BexPlayer : MonoBehaviour {
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
 		bIsFacingRight = true;
+		bIsMoving = false;
 		bIsGrounded = true;
 		bIsDashing = false;
+		bIsShooting = false;
+		bIsKicking = false;
 	}
 
 	void MoveCharacter()
@@ -42,7 +48,8 @@ public class BexPlayer : MonoBehaviour {
 				FlipSprite();
 
 			rb.AddForce( new Vector2( -speed, 0 ) );
-			anim.SetBool( "bIsMoving", true );	// start the animator to show movement
+			anim.SetBool( "bIsMoving", true );  // start the animator to show movement
+			bIsMoving = true;
 		}
 		else if ( Input.GetKey( KeyCode.D ) )
 		{
@@ -52,10 +59,12 @@ public class BexPlayer : MonoBehaviour {
 
 			rb.AddForce( new Vector2( speed, 0 ) );
 			anim.SetBool( "bIsMoving", true );  // start the animator to show movement
+			bIsMoving = true;
 		}
 		else
 		{
 			anim.SetBool( "bIsMoving", false ); // tell animator we are no longer moving
+			bIsMoving = false;
 		}
 
 		// special movements
@@ -67,6 +76,20 @@ public class BexPlayer : MonoBehaviour {
 		if ( Input.GetKeyDown( KeyCode.LeftShift ) && bIsGrounded && !bIsDashing )
 		{
 			Dash();
+		}
+
+		if ( Input.GetMouseButton( 0 ) && !bIsKicking && !bIsDashing )
+		{
+			ShootGun();
+		}
+		else if ( Input.GetMouseButtonDown( 1 ) && !bIsDashing )
+		{
+			Kick();
+		}
+		else
+		{
+			bIsShooting = false;
+			anim.SetBool( "bIsShooting", false );
 		}
 	}
 
@@ -97,6 +120,31 @@ public class BexPlayer : MonoBehaviour {
 			Invoke( "IsDashing", .5f );
 		}
 	}
+
+	void ShootGun()
+	{
+		bIsShooting = true;
+		anim.SetBool( "bIsShooting", true );
+	}
+	void Kick()
+	{
+		if ( bIsKicking )	// leave function if already kicking
+			return;
+
+		bIsKicking = true;
+
+		if ( bIsGrounded )
+		{
+			anim.SetTrigger( "Kick" );
+		}
+		else
+			anim.SetBool( "bIsKicking", true );
+
+		if ( bIsMoving && bIsGrounded )
+		{
+			rb.velocity = Vector2.zero;
+		}
+	}
 	// make sure sprite faces the direction moving
 	void FlipSprite()
 	{
@@ -110,13 +158,28 @@ public class BexPlayer : MonoBehaviour {
 	public void SetIsGrounded( bool val )
 	{
 		bIsGrounded = val;
-		if ( bIsGrounded )	// if we are on the ground, make sure animator knows we are no longer jumping
+		if ( bIsGrounded )  // if we are on the ground, make sure animator knows we are no longer jumping
+		{
 			anim.SetBool( "bIsJumping", false );
+			IsKicking();
+		}
 	}
 
 	void IsDashing()
 	{
 		anim.SetBool( "bIsDashing", false );
 		bIsDashing = false;
+	}
+
+	public void IsKicking()
+	{
+		bIsKicking = false;
+		// stop kick animation
+		anim.SetBool( "bIsKicking", false );
+	}
+
+	void ResetKick()
+	{
+		anim.ResetTrigger( "Kick" );
 	}
 }
