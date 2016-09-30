@@ -136,6 +136,7 @@ public class BexPlayer : MonoBehaviour {
 		if ( bIsGrounded )
 		{
 			anim.SetTrigger( "Kick" );
+			Invoke( "IsKicking", .33f );
 		}
 		else
 			anim.SetBool( "bIsKicking", true );
@@ -144,6 +145,11 @@ public class BexPlayer : MonoBehaviour {
 		{
 			rb.velocity = Vector2.zero;
 		}
+	}
+
+	void ResetKickTrigger()
+	{
+		anim.ResetTrigger( "Kick" );
 	}
 	// make sure sprite faces the direction moving
 	void FlipSprite()
