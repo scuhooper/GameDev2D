@@ -2,23 +2,23 @@
 using System.Collections;
 
 public class BexPlayer : MonoBehaviour {
-	public float speed;
-	public float jumpForce;
-	public float dashSpeed;
+	public float speed;	// horizontal force applied every frame while character is moving
+	public float jumpForce;	// upward force applied when character jumps
+	public float dashSpeed;	// horizontal force applied when character dashes
+	public float jumpKickSpeed;	// controls how fast the kick goes in both horizontal and downward direction
 
-	Rigidbody2D rb;
-	Animator anim;
-	bool bIsFacingRight;
-	bool bIsMoving;
-	bool bIsGrounded;
-	bool bIsDashing;
-	bool bIsShooting;
-	bool bIsKicking;
-	Vector2 newVelocity;
+	Rigidbody2D rb;	// rigidbody2d component
+	Animator anim;	// animator component
+	bool bIsFacingRight;	// bool for keeping track of which direction the sprite is facing (true = right; false = left)
+	bool bIsMoving;	// bool for if the character is moving
+	bool bIsGrounded;	// bool for if the character is currently on the ground
+	bool bIsDashing;	// bool for dashing
+	bool bIsShooting;	// bool for shooting
+	bool bIsKicking;	// bool for kicking
 
 	// Use this for initialization
 	void Start () {
-		Init();
+		Init();	// call function to initialize private variables
 	}
 	
 	// Update is called once per frame
@@ -26,11 +26,12 @@ public class BexPlayer : MonoBehaviour {
 		MoveCharacter();
 	}
 
+	// Initialize all private variables of BexPlayer
 	void Init()
 	{
 		rb = GetComponent<Rigidbody2D>();
 		anim = GetComponent<Animator>();
-		bIsFacingRight = true;
+		bIsFacingRight = true;	// character starts off facing the right
 		bIsMoving = false;
 		bIsGrounded = true;
 		bIsDashing = false;
@@ -40,56 +41,61 @@ public class BexPlayer : MonoBehaviour {
 
 	void MoveCharacter()
 	{
-		// handle input for moving
-		if ( Input.GetKey( KeyCode.A ) )
-		{
-			// flip the sprite if we start moving left and are facing right
-			if ( bIsFacingRight )
-				FlipSprite();
-
-			rb.AddForce( new Vector2( -speed, 0 ) );
-			anim.SetBool( "bIsMoving", true );  // start the animator to show movement
-			bIsMoving = true;
-		}
-		else if ( Input.GetKey( KeyCode.D ) )
-		{
-			// flip the sprite if we start moving right and are facing left
-			if ( !bIsFacingRight )
-				FlipSprite();
-
-			rb.AddForce( new Vector2( speed, 0 ) );
-			anim.SetBool( "bIsMoving", true );  // start the animator to show movement
-			bIsMoving = true;
-		}
+		if ( bIsKicking || bIsDashing )	// if we are kicking or dashing, player cannot perform other actions or change their speed or direction
+			return;
 		else
 		{
-			anim.SetBool( "bIsMoving", false ); // tell animator we are no longer moving
-			bIsMoving = false;
-		}
+			// handle input for moving
+			if ( Input.GetKey( KeyCode.A ) )
+			{
+				// flip the sprite if we start moving left and are facing right
+				if ( bIsFacingRight )
+					FlipSprite();
 
-		// special movements
-		if ( Input.GetKeyDown( KeyCode.Space ) )
-		{
-			Jump();
-		}
+				rb.AddForce( new Vector2( -speed, 0 ) );
+				anim.SetBool( "bIsMoving", true );  // start the animator to show movement
+				bIsMoving = true;
+			}
+			else if ( Input.GetKey( KeyCode.D ) )
+			{
+				// flip the sprite if we start moving right and are facing left
+				if ( !bIsFacingRight )
+					FlipSprite();
 
-		if ( Input.GetKeyDown( KeyCode.LeftShift ) && bIsGrounded && !bIsDashing )
-		{
-			Dash();
-		}
+				rb.AddForce( new Vector2( speed, 0 ) );
+				anim.SetBool( "bIsMoving", true );  // start the animator to show movement
+				bIsMoving = true;
+			}
+			else
+			{
+				anim.SetBool( "bIsMoving", false ); // tell animator we are no longer moving
+				bIsMoving = false;
+			}
 
-		if ( Input.GetMouseButton( 0 ) && !bIsKicking && !bIsDashing )
-		{
-			ShootGun();
-		}
-		else if ( Input.GetMouseButtonDown( 1 ) && !bIsDashing )
-		{
-			Kick();
-		}
-		else
-		{
-			bIsShooting = false;
-			anim.SetBool( "bIsShooting", false );
+			// special movements
+			if ( Input.GetKeyDown( KeyCode.Space ) )
+			{
+				Jump();
+			}
+
+			if ( Input.GetKeyDown( KeyCode.LeftShift ) && bIsGrounded && !bIsDashing )
+			{
+				Dash();
+			}
+
+			if ( Input.GetMouseButton( 0 ) && !bIsKicking && !bIsDashing )
+			{
+				ShootGun();
+			}
+			else if ( Input.GetMouseButtonDown( 1 ) && !bIsDashing )
+			{
+				Kick(); // this will not run if player does not stop shooting for minimum 1 frame
+			}
+			else
+			{
+				bIsShooting = false;
+				anim.SetBool( "bIsShooting", false );
+			}
 		}
 	}
 
@@ -105,43 +111,47 @@ public class BexPlayer : MonoBehaviour {
 
 	void Dash()
 	{
-		if ( bIsFacingRight )
+		if ( bIsFacingRight )	// check direction of sprite
 		{
-			rb.AddForce( new Vector2( dashSpeed, 0 ) );
-			anim.SetBool( "bIsDashing", true );
-			bIsDashing = true;
-			Invoke( "IsDashing", .5f );
+			rb.AddForce( new Vector2( dashSpeed, 0 ) );	// add dash speed to characted
 		}
 		else
 		{
 			rb.AddForce( new Vector2( -dashSpeed, 0 ) );
-			anim.SetBool( "bIsDashing", true );
-			bIsDashing = true;
-			Invoke( "IsDashing", .5f );
 		}
+
+		anim.SetBool( "bIsDashing", true ); // start animation for dashing
+		bIsDashing = true;  // set boolean to prevent changes in direction or speed
+		Invoke( "IsDashing", .5f ); // call a function to reset dash-related variables after .5 seconds
 	}
 
 	void ShootGun()
 	{
-		bIsShooting = true;
-		anim.SetBool( "bIsShooting", true );
+		bIsShooting = true;	// we are currently shooting
+		anim.SetBool( "bIsShooting", true );	// tell animator we are shooting
 	}
 	void Kick()
 	{
 		if ( bIsKicking )	// leave function if already kicking
 			return;
 
-		bIsKicking = true;
+		bIsKicking = true;	// start kicking
 
-		if ( bIsGrounded )
+		if ( bIsGrounded )	// check if we are on the ground
 		{
-			anim.SetTrigger( "Kick" );
-			Invoke( "IsKicking", .33f );
+			anim.SetTrigger( "Kick" );	// start animator for ground kick
+			Invoke( "IsKicking", .33f );	// call function to exit kicking state after .33 seconds (approx. time of ground kick)
 		}
-		else
-			anim.SetBool( "bIsKicking", true );
+		else // we are in the air/jumping
+		{
+			anim.SetBool( "bIsKicking", true );	// tell animator to start jump kick animation
+			if ( bIsFacingRight )   // check direction of sprite and set the velocity of our kick
+				rb.velocity = new Vector2( jumpKickSpeed, -jumpKickSpeed );
+			else
+				rb.velocity = new Vector2( -jumpKickSpeed, -jumpKickSpeed );
+		}
 
-		if ( bIsMoving && bIsGrounded )
+		if ( bIsMoving && bIsGrounded )	// if we are moving and are on the ground, stop all movement to perform kick
 		{
 			rb.velocity = Vector2.zero;
 		}
