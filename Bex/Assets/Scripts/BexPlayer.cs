@@ -5,7 +5,9 @@ public class BexPlayer : MonoBehaviour {
 	public float speed;	// horizontal force applied every frame while character is moving
 	public float jumpForce;	// upward force applied when character jumps
 	public float dashSpeed;	// horizontal force applied when character dashes
-	public float jumpKickSpeed;	// controls how fast the kick goes in both horizontal and downward direction
+	public float jumpKickSpeed; // controls how fast the kick goes in both horizontal and downward direction
+	public float fireRate;	// how many bullets can be fired per second
+	public GameObject bullet;	// hook for bullet prefab
 
 	Rigidbody2D rb;	// rigidbody2d component
 	Animator anim;	// animator component
@@ -14,7 +16,8 @@ public class BexPlayer : MonoBehaviour {
 	bool bIsGrounded;	// bool for if the character is currently on the ground
 	bool bIsDashing;	// bool for dashing
 	bool bIsShooting;	// bool for shooting
-	bool bIsKicking;	// bool for kicking
+	bool bIsKicking;    // bool for kicking
+	float timeLastFired;	// keep track of last time a bullet was fired
 
 	// Use this for initialization
 	void Start () {
@@ -37,6 +40,7 @@ public class BexPlayer : MonoBehaviour {
 		bIsDashing = false;
 		bIsShooting = false;
 		bIsKicking = false;
+		timeLastFired = float.MinValue;
 	}
 
 	void MoveCharacter()
@@ -52,7 +56,8 @@ public class BexPlayer : MonoBehaviour {
 				if ( bIsFacingRight )
 					FlipSprite();
 
-				rb.AddForce( new Vector2( -speed, 0 ) );
+				// rb.AddForce( new Vector2( -speed, 0 ) );
+				rb.velocity = new Vector2( -speed, rb.velocity.y );
 				anim.SetBool( "bIsMoving", true );  // start the animator to show movement
 				bIsMoving = true;
 			}
@@ -62,7 +67,8 @@ public class BexPlayer : MonoBehaviour {
 				if ( !bIsFacingRight )
 					FlipSprite();
 
-				rb.AddForce( new Vector2( speed, 0 ) );
+				// rb.AddForce( new Vector2( speed, 0 ) );
+				rb.velocity = new Vector2( speed, rb.velocity.y );
 				anim.SetBool( "bIsMoving", true );  // start the animator to show movement
 				bIsMoving = true;
 			}
@@ -70,6 +76,7 @@ public class BexPlayer : MonoBehaviour {
 			{
 				anim.SetBool( "bIsMoving", false ); // tell animator we are no longer moving
 				bIsMoving = false;
+				rb.velocity = new Vector2( 0, rb.velocity.y );
 			}
 
 			// special movements
@@ -104,7 +111,8 @@ public class BexPlayer : MonoBehaviour {
 		// check to see if character is on the ground
 		if ( bIsGrounded )
 		{
-			rb.AddForce( new Vector2( 0, jumpForce ) );	// apply the jumpforce
+			// rb.AddForce( new Vector2( 0, jumpForce ) ); // apply the jumpforce
+			rb.velocity = new Vector2( rb.velocity.x, jumpForce );
 			anim.SetBool( "bIsJumping", true );	// start the animation for jumping
 		}
 	}
@@ -113,11 +121,12 @@ public class BexPlayer : MonoBehaviour {
 	{
 		if ( bIsFacingRight )	// check direction of sprite
 		{
-			rb.AddForce( new Vector2( dashSpeed, 0 ) );	// add dash speed to characted
+			rb.velocity = new Vector2( dashSpeed, 0 );	// add dash speed to characted
 		}
 		else
 		{
-			rb.AddForce( new Vector2( -dashSpeed, 0 ) );
+			rb.velocity = new Vector2( -dashSpeed, 0 );	// add dash speed to characted
+			// rb.AddForce( new Vector2( -dashSpeed, 0 ) );
 		}
 
 		anim.SetBool( "bIsDashing", true ); // start animation for dashing
@@ -128,7 +137,15 @@ public class BexPlayer : MonoBehaviour {
 	void ShootGun()
 	{
 		bIsShooting = true;	// we are currently shooting
-		anim.SetBool( "bIsShooting", true );	// tell animator we are shooting
+		anim.SetBool( "bIsShooting", true );    // tell animator we are shooting
+		if ( Time.time > timeLastFired + 1 / fireRate )	// fire a new bullet if the fire rate allows
+		{
+			if ( bIsFacingRight)	// change spawn position based on direction sprite is facing
+				Instantiate( bullet, transform.position + new Vector3( 1.011f, .833f ), transform.rotation );	// spawn bullet in game, has offset to appear to be fired from weapon
+			else
+				Instantiate( bullet, transform.position + new Vector3( -1.011f, .833f ), transform.rotation );	// spawn bullet in game, has offset to appear to be fired from weapon
+			timeLastFired = Time.time;	// update time last fired to current time
+		}
 	}
 	void Kick()
 	{
@@ -183,8 +200,8 @@ public class BexPlayer : MonoBehaviour {
 
 	void IsDashing()
 	{
-		anim.SetBool( "bIsDashing", false );
-		bIsDashing = false;
+		anim.SetBool( "bIsDashing", false );	// stop dashing animation
+		bIsDashing = false;	// inform game logic we are no longer dashing
 	}
 
 	public void IsKicking()
@@ -196,6 +213,15 @@ public class BexPlayer : MonoBehaviour {
 
 	void ResetKick()
 	{
-		anim.ResetTrigger( "Kick" );
+		anim.ResetTrigger( "Kick" );	// reset kick trigger
+	}
+
+	/// <summary>
+	/// Returns the value of bIsFacingRight
+	/// </summary>
+	/// <returns></returns>
+	public bool IsFacingRight()
+	{
+		return bIsFacingRight;
 	}
 }
