@@ -1,0 +1,983 @@
+fileFormatVersion: 2
+guid: 7be48e90f8935f44ca8122cb2875ad12
+timeCreated: 1475458214
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Forklift_new_0
+    21300002: Forklift_new_1
+    21300004: Forklift_new_2
+    21300006: Forklift_new_3
+    21300008: Forklift_new_4
+    21300010: Forklift_new_5
+    21300012: Forklift_new_6
+    21300014: Forklift_new_7
+    21300016: Forklift_new_9
+    21300018: Forklift_new_10
+    21300020: Forklift_new_11
+    21300022: Forklift_new_12
+    21300024: Forklift_new_13
+    21300026: Forklift_new_14
+    21300028: Forklift_new_15
+    21300030: Forklift_new_16
+    21300032: Forklift_new_18
+    21300034: Forklift_new_19
+    21300036: Forklift_new_20
+    21300038: Forklift_new_21
+    21300040: Forklift_new_22
+    21300042: Forklift_new_23
+    21300044: Forklift_new_24
+    21300046: Forklift_new_25
+    21300048: Forklift_new_26
+    21300050: Forklift_new_27
+    21300052: Forklift_new_28
+    21300054: Forklift_new_29
+    21300056: Forklift_new_30
+    21300058: Forklift_new_31
+    21300060: Forklift_new_32
+    21300062: Forklift_new_33
+    21300064: Forklift_new_34
+    21300066: Forklift_new_35
+    21300068: Forklift_new_36
+    21300070: Forklift_new_37
+    21300072: Forklift_new_38
+    21300074: Forklift_new_39
+    21300076: Forklift_new_40
+    21300078: Forklift_new_41
+    21300080: Forklift_new_42
+    21300082: Forklift_new_43
+    21300084: Forklift_new_44
+    21300086: Forklift_new_45
+    21300088: Forklift_new_46
+    21300090: Forklift_new_47
+    21300092: Forklift_new_48
+    21300094: Forklift_new_49
+    21300096: Forklift_new_50
+    21300098: Forklift_new_51
+    21300100: Forklift_new_52
+    21300102: Forklift_new_53
+    21300104: Forklift_new_54
+    21300106: Forklift_new_55
+    21300108: Forklift_new_56
+    21300110: Forklift_new_57
+    21300112: Forklift_new_58
+    21300114: Forklift_new_59
+    21300116: Forklift_new_60
+    21300118: Forklift_new_61
+    21300120: Forklift_new_62
+    21300122: Forklift_new_63
+    21300124: Forklift_new_64
+    21300126: Forklift_new_65
+    21300128: Forklift_new_66
+    21300130: Forklift_new_67
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 7
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  allowsAlphaSplitting: 0
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Forklift_new_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_1
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_2
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_3
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_4
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_5
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_6
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_7
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 1056
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_9
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_11
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_12
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_13
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_14
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_15
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_16
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 912
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_18
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_19
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_20
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_21
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_22
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_23
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_24
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_25
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 768
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_26
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_27
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_28
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_29
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_30
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_31
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_32
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_33
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 624
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_34
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_35
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_36
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_37
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_38
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_39
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_40
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_41
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 480
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_42
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_43
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_44
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_45
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_46
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_47
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_48
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_49
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 336
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_50
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_51
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_52
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_53
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_54
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_55
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_56
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_57
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 192
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_58
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_59
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_60
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_61
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_62
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_63
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_64
+      rect:
+        serializedVersion: 2
+        x: 906
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_65
+      rect:
+        serializedVersion: 2
+        x: 1049
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_66
+      rect:
+        serializedVersion: 2
+        x: 1192
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Forklift_new_67
+      rect:
+        serializedVersion: 2
+        x: 1335
+        y: 48
+        width: 133
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    outline: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
