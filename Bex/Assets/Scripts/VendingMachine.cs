@@ -12,7 +12,7 @@ public class VendingMachine : MonoBehaviour {
 	bool bIsActive;
 
 	// component variables
-	AudioSource audio;
+	AudioSource audioSource;
 
 	float lastTimeFired;	// last time object fired a projectile
 
@@ -41,7 +41,7 @@ public class VendingMachine : MonoBehaviour {
 		bIsActive = false;
 		lastTimeFired = float.MinValue;
 
-		audio = GetComponent<AudioSource>();
+		audioSource = GetComponent<AudioSource>();
 	}
 
 	void Activate()
@@ -60,7 +60,7 @@ public class VendingMachine : MonoBehaviour {
 			lastTimeFired = Time.time;	// update time last fired to current time
 			float angle = Mathf.Atan2( target.y, target.x ) * Mathf.Rad2Deg;    // get the angle in degrees from this object's right to the player
 			Instantiate( projectile[ Random.Range( 0, projectile.Length ) ], transform.position, Quaternion.Euler( 0, 0, angle ) ); // create the projectile facing down the angle found
-			audio.Play();
+			audioSource.Play();
 		}
 	}
 
