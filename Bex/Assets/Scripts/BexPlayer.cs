@@ -9,14 +9,18 @@ public class BexPlayer : MonoBehaviour {
 	public float fireRate;	// how many bullets can be fired per second
 	public GameObject bullet;	// hook for bullet prefab
 
-	Rigidbody2D rb;	// rigidbody2d component
-	Animator anim;	// animator component
+	// state booleans
 	bool bIsFacingRight;	// bool for keeping track of which direction the sprite is facing (true = right; false = left)
 	bool bIsMoving;	// bool for if the character is moving
 	bool bIsGrounded;	// bool for if the character is currently on the ground
 	bool bIsDashing;	// bool for dashing
 	bool bIsShooting;	// bool for shooting
 	bool bIsKicking;    // bool for kicking
+
+	// component variables
+	Rigidbody2D rb;	// rigidbody2d component
+	Animator anim;	// animator component
+
 	float timeLastFired;	// keep track of last time a bullet was fired
 
 	// Use this for initialization
@@ -194,7 +198,7 @@ public class BexPlayer : MonoBehaviour {
 		if ( bIsGrounded )  // if we are on the ground, make sure animator knows we are no longer jumping
 		{
 			anim.SetBool( "bIsJumping", false );
-			IsKicking();
+			IsKicking();	// call to make sure if a dive kick was being done, the animation also ends
 		}
 	}
 

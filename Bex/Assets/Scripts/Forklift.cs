@@ -7,13 +7,18 @@ public class Forklift : MonoBehaviour {
 	public GameObject player;	// hook for player character in editor
 	public float chargeDuration;	// how long does the charge last
 	public float timeBetweenCharges;	// how often can we start a charge
-	public float chargeSpeed;	// how fast is the charge
+	public float chargeSpeed;   // how fast is the charge
+	public float maxChargeDistance;	// how close does the player need to be to charge at them
 
 	// basic state booleans
 	bool bIsActive;
 	bool bIsFacingLeft;
 	bool bIsCharging;
 	bool bIsTired;
+
+	// component variables
+	Rigidbody2D rb;
+	SpriteRenderer sprite;
 
 	float timeIdle;	// amount of time spent idle
 
@@ -28,7 +33,7 @@ public class Forklift : MonoBehaviour {
 		{
 			Debug.Log( "Forklift is active!" );
 			float distance = Vector3.Distance( transform.position, player.transform.position );	// calculate the distance between the forklift and the player
-			if ( distance < 5 && !bIsTired )	// is the player within x units of this object and have we recovered from charging 
+			if ( distance < maxChargeDistance && !bIsTired )	// is the player within x units of this object and have we recovered from charging 
 			{
 				if ( transform.position.x - player.transform.position.x > 0 )	// if the difference between x values is positive, the player is to the left
 				{
@@ -57,6 +62,8 @@ public class Forklift : MonoBehaviour {
 		bIsCharging = false;
 		bIsTired = false;
 		timeIdle = 0;
+		rb = GetComponent<Rigidbody2D>();
+		sprite = GetComponent<SpriteRenderer>();
 	}
 
 	/// <summary>
@@ -74,9 +81,9 @@ public class Forklift : MonoBehaviour {
 	{
 		// determine which direction we are facing and move that direction
 		if ( bIsFacingLeft )
-			GetComponent<Rigidbody2D>().velocity = new Vector2( -chargeSpeed, 0 );
+			rb.velocity = new Vector2( -chargeSpeed, 0 );
 		else
-			GetComponent<Rigidbody2D>().velocity = new Vector2( chargeSpeed, 0 );
+			rb.velocity = new Vector2( chargeSpeed, 0 );
 
 		// update state booleans
 		bIsCharging = true;
@@ -101,9 +108,9 @@ public class Forklift : MonoBehaviour {
 			timeIdle += Time.deltaTime;	// increment the time idle
 			// move slightly based on the direction facing
 			if ( bIsFacingLeft )
-				GetComponent<Rigidbody2D>().velocity = new Vector2( -1, 0 );
+				rb.velocity = new Vector2( -1, 0 );
 			else
-				GetComponent<Rigidbody2D>().velocity = new Vector2( 1, 0 );
+				rb.velocity = new Vector2( 1, 0 );
 		}
 	}
 
@@ -125,7 +132,7 @@ public class Forklift : MonoBehaviour {
 	void ChangeDirection()
 	{
 		bIsFacingLeft = !bIsFacingLeft;
-		GetComponent<SpriteRenderer>().flipX = !GetComponent<SpriteRenderer>().flipX;
+		sprite.flipX = !sprite.flipX;
 	}
 
 	void OnTriggerEnter2D( Collider2D col )
