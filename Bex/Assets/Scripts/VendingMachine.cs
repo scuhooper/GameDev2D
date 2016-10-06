@@ -14,7 +14,8 @@ public class VendingMachine : MonoBehaviour {
 	// component variables
 	AudioSource audioSource;
 
-	float lastTimeFired;	// last time object fired a projectile
+	float lastTimeFired;    // last time object fired a projectile
+	Vector3 offset;	// offset of player's center from feet
 
 	// Use this for initialization
 	void Start () {
@@ -25,7 +26,7 @@ public class VendingMachine : MonoBehaviour {
 	void Update () {
 		if ( bIsActive )
 		{
-			Vector3 target = transform.position - player.transform.position;	// find the vector from this object to the player
+			Vector3 target = transform.position - ( player.transform.position + offset );	// find the vector from this object to the player + offset
 			if ( target.magnitude < maxFireDistance && Time.time - lastTimeFired > 1 / fireRate )	// if this object is within distance, fire the can cannon
 			{
 				Fire( target );	// call fire function
@@ -40,7 +41,7 @@ public class VendingMachine : MonoBehaviour {
 	{
 		bIsActive = false;
 		lastTimeFired = float.MinValue;
-
+		offset = new Vector3( 0, 1, 0 );    // player sprite is centered at the bottom of the sprite, offset brings center of player up to chest
 		audioSource = GetComponent<AudioSource>();
 	}
 

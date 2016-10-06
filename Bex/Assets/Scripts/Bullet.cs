@@ -24,4 +24,14 @@ public class Bullet : MonoBehaviour {
 		if ( Time.time > timeSpawned + lifeTime )	// if the lifetime has elapsed
 			Destroy( gameObject );	// destroy the bullet
 	}
+
+	void OnTriggerEnter2D( Collider2D col )
+	{
+		if ( col.gameObject.tag == "Enemy" && col.isTrigger == false )
+		{
+			// damage the enemy
+			Debug.Log( "Bullet did " + damage + " damage to " + col.gameObject.name );
+			Destroy( gameObject );
+		}
+	}
 }

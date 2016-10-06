@@ -31,7 +31,6 @@ public class Forklift : MonoBehaviour {
 	void Update () {
 		if ( bIsActive && !bIsCharging )	// code only runs if the player is inside the trigger collider and the forklift is not actively charging
 		{
-			Debug.Log( "Forklift is active!" );
 			float distance = Vector3.Distance( transform.position, player.transform.position );	// calculate the distance between the forklift and the player
 			if ( distance < maxChargeDistance && !bIsTired )	// is the player within x units of this object and have we recovered from charging 
 			{
@@ -146,7 +145,6 @@ public class Forklift : MonoBehaviour {
 		if ( col.gameObject.tag == "Player" )	// if the player leaves the trigger volume
 		{
 			Activate();	// deactivate the object and stop running it's logic
-			Debug.Log( "Forklift is inactive!" );
 		}
 	}
 }

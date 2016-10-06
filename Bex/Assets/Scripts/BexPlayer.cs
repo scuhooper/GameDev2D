@@ -6,8 +6,11 @@ public class BexPlayer : MonoBehaviour {
 	public float jumpForce;	// upward force applied when character jumps
 	public float dashSpeed;	// horizontal force applied when character dashes
 	public float jumpKickSpeed; // controls how fast the kick goes in both horizontal and downward direction
-	public float fireRate;	// how many bullets can be fired per second
-	public GameObject bullet;	// hook for bullet prefab
+	public float fireRate;  // how many bullets can be fired per second
+	public int kickDamage;	// how much damage a kick does
+	public GameObject bullet;   // hook for bullet prefab
+	public BoxCollider2D crouchKickCollider;    // get the crouch kick's box collider
+	public BoxCollider2D jumpKickCollider;	// get the jump kick's box collider
 
 	// state booleans
 	bool bIsFacingRight;	// bool for keeping track of which direction the sprite is facing (true = right; false = left)
@@ -115,7 +118,6 @@ public class BexPlayer : MonoBehaviour {
 		// check to see if character is on the ground
 		if ( bIsGrounded )
 		{
-			// rb.AddForce( new Vector2( 0, jumpForce ) ); // apply the jumpforce
 			rb.velocity = new Vector2( rb.velocity.x, jumpForce );
 			anim.SetBool( "bIsJumping", true );	// start the animation for jumping
 		}
@@ -130,7 +132,6 @@ public class BexPlayer : MonoBehaviour {
 		else
 		{
 			rb.velocity = new Vector2( -dashSpeed, 0 );	// add dash speed to characted
-			// rb.AddForce( new Vector2( -dashSpeed, 0 ) );
 		}
 
 		anim.SetBool( "bIsDashing", true ); // start animation for dashing
@@ -161,11 +162,13 @@ public class BexPlayer : MonoBehaviour {
 		if ( bIsGrounded )	// check if we are on the ground
 		{
 			anim.SetTrigger( "Kick" );	// start animator for ground kick
-			Invoke( "IsKicking", .33f );	// call function to exit kicking state after .33 seconds (approx. time of ground kick)
+			Invoke( "IsKicking", .33f );    // call function to exit kicking state after .33 seconds (approx. time of ground kick)
+			crouchKickCollider.enabled = true;	// turn on crouch kick collider
 		}
 		else // we are in the air/jumping
 		{
-			anim.SetBool( "bIsKicking", true );	// tell animator to start jump kick animation
+			anim.SetBool( "bIsKicking", true ); // tell animator to start jump kick animation
+			jumpKickCollider.enabled = true;	// turn on jump kick collider
 			if ( bIsFacingRight )   // check direction of sprite and set the velocity of our kick
 				rb.velocity = new Vector2( jumpKickSpeed, -jumpKickSpeed );
 			else
@@ -213,6 +216,9 @@ public class BexPlayer : MonoBehaviour {
 		bIsKicking = false;
 		// stop kick animation
 		anim.SetBool( "bIsKicking", false );
+		// turn off kicking colliders
+		jumpKickCollider.enabled = false;
+		crouchKickCollider.enabled = false;
 	}
 
 	void ResetKick()
@@ -227,5 +233,17 @@ public class BexPlayer : MonoBehaviour {
 	public bool IsFacingRight()
 	{
 		return bIsFacingRight;
+	}
+
+	void OnTriggerEnter2D( Collider2D col )
+	{
+		if ( crouchKickCollider.enabled == true || jumpKickCollider.enabled == true )
+		{
+			if ( col.gameObject.tag == "Enemy" && col.isTrigger == false )
+			{
+				// damage the enemy with kickDamage
+				Debug.Log( "Player kicked " + col.gameObject.name + " for " + kickDamage + " damage!" );
+			}
+		}
 	}
 }
