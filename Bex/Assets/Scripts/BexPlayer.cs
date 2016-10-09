@@ -1,13 +1,16 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class BexPlayer : MonoBehaviour {
+public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	public float speed;	// horizontal force applied every frame while character is moving
 	public float jumpForce;	// upward force applied when character jumps
 	public float dashSpeed;	// horizontal force applied when character dashes
 	public float jumpKickSpeed; // controls how fast the kick goes in both horizontal and downward direction
 	public float fireRate;  // how many bullets can be fired per second
-	public int kickDamage;	// how much damage a kick does
+	public int kickDamage;  // how much damage a kick does
+	public int health;
+	public int maxHealth;
+	public float blinkTime; // how long does the object blink
 	public GameObject bullet;   // hook for bullet prefab
 	public BoxCollider2D crouchKickCollider;    // get the crouch kick's box collider
 	public BoxCollider2D jumpKickCollider;	// get the jump kick's box collider
@@ -19,12 +22,16 @@ public class BexPlayer : MonoBehaviour {
 	bool bIsDashing;	// bool for dashing
 	bool bIsShooting;	// bool for shooting
 	bool bIsKicking;    // bool for kicking
+	bool bDamagedRecently;	// bool for if we have recently taken damage
 
 	// component variables
 	Rigidbody2D rb;	// rigidbody2d component
 	Animator anim;	// animator component
 
-	float timeLastFired;	// keep track of last time a bullet was fired
+	float timeLastFired;    // keep track of last time a bullet was fired
+	Color alphaOne, alphaHalf;  // hold alpha values for colors
+	float blinkSpeed;   // how fast do we want to blink
+	float blinkStartTime;   // when did the blinking start
 
 	// Use this for initialization
 	void Start () {
@@ -48,10 +55,17 @@ public class BexPlayer : MonoBehaviour {
 		bIsShooting = false;
 		bIsKicking = false;
 		timeLastFired = float.MinValue;
+		alphaOne = new Color( 1, 1, 1, 1 ); // Opaque alpha value
+		alphaHalf = new Color( 1, 1, 1, .5f );  // half transparent alpha value
+		blinkSpeed = 10;
+		blinkStartTime = Time.time;
 	}
 
 	void MoveCharacter()
 	{
+		if ( bDamagedRecently )
+			Blink();
+
 		if ( bIsKicking || bIsDashing )	// if we are kicking or dashing, player cannot perform other actions or change their speed or direction
 			return;
 		else
@@ -235,6 +249,18 @@ public class BexPlayer : MonoBehaviour {
 		return bIsFacingRight;
 	}
 
+	// Got help with this function from Cameron Asbury. He talked me through how he did it in our Shmup project, I implemented it on my own in this project
+	void Blink()
+	{
+		if ( Time.time < blinkStartTime + blinkTime )   // are we within the timeframe for blinking
+			GetComponent<SpriteRenderer>().color = Color.Lerp( alphaHalf, alphaOne, Mathf.PingPong( Time.time * blinkSpeed, 1 ) );  // bounce the alpha between half transparency and opaque
+		else
+		{
+			bDamagedRecently = false;   // reset the damage boolean so we will stop blinking
+			GetComponent<SpriteRenderer>().color = alphaOne;    // reset the alpha to be opaque
+		}
+	}
+
 	void OnTriggerEnter2D( Collider2D col )
 	{
 		if ( crouchKickCollider.enabled == true || jumpKickCollider.enabled == true )
@@ -243,7 +269,28 @@ public class BexPlayer : MonoBehaviour {
 			{
 				// damage the enemy with kickDamage
 				Debug.Log( "Player kicked " + col.gameObject.name + " for " + kickDamage + " damage!" );
+				col.gameObject.GetComponent<IDamageable>().TakeDamage( kickDamage );
 			}
 		}
+	}
+
+	public void TakeDamage( int dmg )
+	{
+		if ( !bDamagedRecently )
+		{
+			health -= dmg;  // subtract damage from current health
+			Debug.Log( "Bex took " + dmg + " damage!" );
+			anim.SetTrigger( "TakeDamage" );
+			blinkStartTime = Time.time;
+			bDamagedRecently = true;
+			if ( health <= 0 )
+				Kill(); // player is dead
+		}
+	}
+
+	public void Kill()
+	{
+		// player has been defeated
+
 	}
 }

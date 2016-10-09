@@ -1,26 +1,30 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class Forklift : MonoBehaviour {
+public class Forklift : MonoBehaviour, IKillable, IDamageable {
 	public int health;
 	public int damage;
 	public GameObject player;	// hook for player character in editor
 	public float chargeDuration;	// how long does the charge last
 	public float timeBetweenCharges;	// how often can we start a charge
 	public float chargeSpeed;   // how fast is the charge
-	public float maxChargeDistance;	// how close does the player need to be to charge at them
+	public float maxChargeDistance; // how close does the player need to be to charge at them
+	public float blinkTime; // how long does the object blink
 
 	// basic state booleans
 	bool bIsActive;
 	bool bIsFacingLeft;
 	bool bIsCharging;
 	bool bIsTired;
+	bool bDamagedRecently;
 
 	// component variables
 	Rigidbody2D rb;
-	SpriteRenderer sprite;
 
-	float timeIdle;	// amount of time spent idle
+	float timeIdle; // amount of time spent idle
+	Color alphaOne, alphaHalf;  // hold alpha values for colors
+	float blinkSpeed;   // how fast do we want to blink
+	float blinkStartTime;   // when did the blinking start
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +33,9 @@ public class Forklift : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if ( bDamagedRecently )
+			Blink();
+
 		if ( bIsActive && !bIsCharging )	// code only runs if the player is inside the trigger collider and the forklift is not actively charging
 		{
 			float distance = Vector3.Distance( transform.position, player.transform.position );	// calculate the distance between the forklift and the player
@@ -62,7 +69,10 @@ public class Forklift : MonoBehaviour {
 		bIsTired = false;
 		timeIdle = 0;
 		rb = GetComponent<Rigidbody2D>();
-		sprite = GetComponent<SpriteRenderer>();
+		alphaOne = new Color( 1, 1, 1, 1 ); // Opaque alpha value
+		alphaHalf = new Color( 1, 1, 1, .5f );  // half transparent alpha value
+		blinkSpeed = 10;
+		blinkStartTime = Time.time;
 	}
 
 	/// <summary>
@@ -131,7 +141,22 @@ public class Forklift : MonoBehaviour {
 	void ChangeDirection()
 	{
 		bIsFacingLeft = !bIsFacingLeft;
-		sprite.flipX = !sprite.flipX;
+		if ( bIsFacingLeft )
+			transform.localScale = new Vector3( 2, 2, 1 );
+		else
+			transform.localScale = new Vector3( -2, 2, 1 );
+	}
+
+	// Got help with this function from Cameron Asbury. He talked me through how he did it in our Shmup project, I implemented it on my own in this project
+	void Blink()
+	{
+		if ( Time.time < blinkStartTime + blinkTime )   // are we within the timeframe for blinking
+			GetComponent<SpriteRenderer>().color = Color.Lerp( alphaHalf, alphaOne, Mathf.PingPong( Time.time * blinkSpeed, 1 ) );  // bounce the alpha between half transparency and opaque
+		else
+		{
+			bDamagedRecently = false;   // reset the damage boolean so we will stop blinking
+			GetComponent<SpriteRenderer>().color = alphaOne;    // reset the alpha to be opaque
+		}
 	}
 
 	void OnTriggerEnter2D( Collider2D col )
@@ -146,5 +171,19 @@ public class Forklift : MonoBehaviour {
 		{
 			Activate();	// deactivate the object and stop running it's logic
 		}
+	}
+
+	public void TakeDamage( int dmg )
+	{
+		health -= dmg;  // lower health by incoming damage
+		blinkStartTime = Time.time;
+		bDamagedRecently = true;	// set damaged to true
+		if ( health <= 0 )	// if health drops below 0
+			Kill();	// object is dead
+	}
+
+	public void Kill()
+	{
+		Destroy( gameObject );
 	}
 }

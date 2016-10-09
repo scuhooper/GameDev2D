@@ -4,6 +4,7 @@ using System.Collections;
 public class Can : MonoBehaviour {
     public float speed;
     public float lifeSpan;
+	public int damage;
 
     float timeSpawned;
 
@@ -18,5 +19,14 @@ public class Can : MonoBehaviour {
             Destroy( gameObject );
         else
             transform.Translate( new Vector3( -speed * Time.deltaTime, 0, 0 ) );
+	}
+
+	void OnTriggerEnter2D( Collider2D col )
+	{
+		if ( col.gameObject.tag == "Player" && col.isTrigger == false )
+		{
+			col.gameObject.GetComponent<BexPlayer>().TakeDamage( damage );
+		}
+		Destroy( gameObject );
 	}
 }

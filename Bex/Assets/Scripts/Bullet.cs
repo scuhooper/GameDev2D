@@ -31,6 +31,7 @@ public class Bullet : MonoBehaviour {
 		{
 			// damage the enemy
 			Debug.Log( "Bullet did " + damage + " damage to " + col.gameObject.name );
+			col.GetComponent<IDamageable>().TakeDamage( damage );
 			Destroy( gameObject );
 		}
 	}
