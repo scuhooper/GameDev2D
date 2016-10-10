@@ -291,6 +291,5 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	public void Kill()
 	{
 		// player has been defeated
-
 	}
 }

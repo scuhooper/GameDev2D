@@ -7,7 +7,8 @@ public class VendingMachine : MonoBehaviour, IKillable, IDamageable {
 	public float maxFireDistance;   // how close does the player need to be to shoot at them
 	public float blinkTime;	// how long does the object blink
 	public GameObject player;	// editor hook for player
-	public GameObject[] projectile;	// editor hook for projectiles, uses an array so we can choose between multiple types of cans
+	public GameObject[] projectile; // editor hook for projectiles, uses an array so we can choose between multiple types of cans
+	public GameObject brokenVendMachine;    // editor hook for broken vending machine prefab
 
 	// state booleans
 	bool bIsActive;
@@ -118,6 +119,7 @@ public class VendingMachine : MonoBehaviour, IKillable, IDamageable {
 
 	public void Kill()
 	{
+		Instantiate( brokenVendMachine, transform.position, transform.rotation );
 		// object has died
 		Destroy( gameObject );
 	}

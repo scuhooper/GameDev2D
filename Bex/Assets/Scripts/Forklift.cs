@@ -10,6 +10,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 	public float chargeSpeed;   // how fast is the charge
 	public float maxChargeDistance; // how close does the player need to be to charge at them
 	public float blinkTime; // how long does the object blink
+	public AudioSource deathClip;	// editor hook for death noise
 
 	// basic state booleans
 	bool bIsActive;
@@ -20,6 +21,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 
 	// component variables
 	Rigidbody2D rb;
+	AudioSource source;
 
 	float timeIdle; // amount of time spent idle
 	Color alphaOne, alphaHalf;  // hold alpha values for colors
@@ -69,6 +71,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 		bIsTired = false;
 		timeIdle = 0;
 		rb = GetComponent<Rigidbody2D>();
+		source = GetComponent<AudioSource>();
 		alphaOne = new Color( 1, 1, 1, 1 ); // Opaque alpha value
 		alphaHalf = new Color( 1, 1, 1, .5f );  // half transparent alpha value
 		blinkSpeed = 10;
@@ -97,6 +100,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 		// update state booleans
 		bIsCharging = true;
 		bIsTired = true;
+		source.Play();
 		Invoke( "IsCharging", chargeDuration );	// call function to reset bIsCharging after designer-specified delay
 		Invoke( "IsTired", timeBetweenCharges );    // call function to reset bIsTired after designer-specified delay
 	}
@@ -159,6 +163,14 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 		}
 	}
 
+	void OnCollisionStay2D( Collision2D col )
+	{
+		if ( col.gameObject.tag == "Player" )
+		{
+			col.gameObject.GetComponent<IDamageable>().TakeDamage( damage );
+		}
+	}
+
 	void OnTriggerEnter2D( Collider2D col )
 	{
 		if (col.gameObject.tag == "Player")	// check if the player is in the trigger
@@ -184,6 +196,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 
 	public void Kill()
 	{
-		Destroy( gameObject );
+		deathClip.Play();
+		Destroy( gameObject, 1 );
 	}
 }
