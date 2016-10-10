@@ -196,7 +196,12 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 
 	public void Kill()
 	{
+		// start kill animation and audio
 		deathClip.Play();
-		Destroy( gameObject, 1 );
+		GetComponent<Animator>().SetTrigger( "ForkliftDestroyed" );
+		GetComponent<PolygonCollider2D>().enabled = false;	// disable the collider
+		transform.localScale = new Vector3( .5f, .5f );	// explosion animation is too big by default, sets it to be half size
+		rb.isKinematic = true;	// makes the rigidbody2D be kinematic so it doesn't fall through the ground
+		Destroy( gameObject, 1 );	// destroy object after 1 second delay
 	}
 }

@@ -270,6 +270,17 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 				// damage the enemy with kickDamage
 				Debug.Log( "Player kicked " + col.gameObject.name + " for " + kickDamage + " damage!" );
 				col.gameObject.GetComponent<IDamageable>().TakeDamage( kickDamage );
+				if ( bIsGrounded == false )
+				{
+					anim.SetBool( "bIsKicking", false );
+					jumpKickCollider.enabled = false;
+					if ( bIsFacingRight )
+					{
+						rb.velocity = new Vector2( -1, 1 );
+					}
+					else
+						rb.velocity = new Vector2( 1, 1 );
+				}
 			}
 		}
 	}
