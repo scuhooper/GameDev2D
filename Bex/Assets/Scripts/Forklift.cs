@@ -198,6 +198,7 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 	{
 		// start kill animation and audio
 		deathClip.Play();
+		Activate();
 		GetComponent<Animator>().SetTrigger( "ForkliftDestroyed" );
 		GetComponent<PolygonCollider2D>().enabled = false;	// disable the collider
 		transform.localScale = new Vector3( .5f, .5f );	// explosion animation is too big by default, sets it to be half size

@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
@@ -20,7 +21,6 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	bool bIsMoving;	// bool for if the character is moving
 	bool bIsGrounded;	// bool for if the character is currently on the ground
 	bool bIsDashing;	// bool for dashing
-	bool bIsShooting;	// bool for shooting
 	bool bIsKicking;    // bool for kicking
 	bool bDamagedRecently;	// bool for if we have recently taken damage
 
@@ -32,6 +32,8 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	Color alphaOne, alphaHalf;  // hold alpha values for colors
 	float blinkSpeed;   // how fast do we want to blink
 	float blinkStartTime;   // when did the blinking start
+	Slider healthBar;
+	
 
 	// Use this for initialization
 	void Start () {
@@ -52,13 +54,14 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 		bIsMoving = false;
 		bIsGrounded = true;
 		bIsDashing = false;
-		bIsShooting = false;
 		bIsKicking = false;
 		timeLastFired = float.MinValue;
 		alphaOne = new Color( 1, 1, 1, 1 ); // Opaque alpha value
 		alphaHalf = new Color( 1, 1, 1, .5f );  // half transparent alpha value
 		blinkSpeed = 10;
 		blinkStartTime = Time.time;
+		healthBar = FindObjectOfType<Slider>();
+		healthBar.value = health;
 	}
 
 	void MoveCharacter()
@@ -121,7 +124,6 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 			}
 			else
 			{
-				bIsShooting = false;
 				anim.SetBool( "bIsShooting", false );
 			}
 		}
@@ -155,7 +157,6 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 
 	void ShootGun()
 	{
-		bIsShooting = true;	// we are currently shooting
 		anim.SetBool( "bIsShooting", true );    // tell animator we are shooting
 		if ( Time.time > timeLastFired + 1 / fireRate )	// fire a new bullet if the fire rate allows
 		{
@@ -289,11 +290,13 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	{
 		if ( !bDamagedRecently )
 		{
+			GetComponent<AudioSource>().Play();
 			health -= dmg;  // subtract damage from current health
 			Debug.Log( "Bex took " + dmg + " damage!" );
 			anim.SetTrigger( "TakeDamage" );
 			blinkStartTime = Time.time;
 			bDamagedRecently = true;
+			healthBar.value = health;
 			if ( health <= 0 )
 				Kill(); // player is dead
 		}
