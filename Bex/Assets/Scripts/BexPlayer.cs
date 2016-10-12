@@ -13,6 +13,7 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	public int maxHealth;
 	public float blinkTime; // how long does the object blink
 	public GameObject bullet;   // hook for bullet prefab
+    public GameObject gameLogic;    // hook for gamelogic
 	public BoxCollider2D crouchKickCollider;    // get the crouch kick's box collider
 	public BoxCollider2D jumpKickCollider;	// get the jump kick's box collider
 
@@ -32,7 +33,7 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	Color alphaOne, alphaHalf;  // hold alpha values for colors
 	float blinkSpeed;   // how fast do we want to blink
 	float blinkStartTime;   // when did the blinking start
-	Slider healthBar;
+	Slider healthBar;   // healthbar UI hook
 	
 
 	// Use this for initialization
@@ -42,7 +43,10 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	
 	// Update is called once per frame
 	void Update () {
-		MoveCharacter();
+        if ( !gameLogic.GetComponent<PauseMenu>().bIsPaused )
+        {
+            MoveCharacter();
+        }
 	}
 
 	// Initialize all private variables of BexPlayer
