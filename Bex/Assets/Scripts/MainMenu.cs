@@ -16,7 +16,7 @@ public class MainMenu : MonoBehaviour {
 
 	public void OnStartButtonClicked()
 	{
-		SceneManager.LoadScene( "Level1" );
+		SceneManager.LoadScene( "LevelOne" );
 	}
 
 	public void OnControlsButtonClicked()
