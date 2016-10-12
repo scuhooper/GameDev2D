@@ -3,13 +3,14 @@ using System.Collections;
 
 public class PlayerCamera : MonoBehaviour {
 	public GameObject player;
-	public int offset;
+	public int offsetX;
+	public int offsetY;
 
 	Vector3 targetPos;
 
 	// Use this for initialization
 	void Start () {
-		targetPos = new Vector3( player.transform.position.x + offset, player.transform.position.y, transform.position.z );
+		targetPos = new Vector3( player.transform.position.x + offsetX, player.transform.position.y + offsetY, transform.position.z );
 		transform.position = targetPos;
 	}
 	
@@ -17,9 +18,9 @@ public class PlayerCamera : MonoBehaviour {
 	void Update () {
 		// change offset depending on direction player is facing
 		if ( player.GetComponent<BexPlayer>().IsFacingRight() == true)
-			targetPos = new Vector3( player.transform.position.x + offset, player.transform.position.y, transform.position.z );
+			targetPos = new Vector3( player.transform.position.x + offsetX, player.transform.position.y + offsetY, transform.position.z );
 		else
-			targetPos = new Vector3( player.transform.position.x - offset, player.transform.position.y, transform.position.z );
+			targetPos = new Vector3( player.transform.position.x - offsetX, player.transform.position.y + offsetY, transform.position.z );
 
 		transform.position = Vector3.Lerp( transform.position, targetPos, .05f );
 	}
