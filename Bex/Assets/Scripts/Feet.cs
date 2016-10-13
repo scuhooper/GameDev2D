@@ -19,6 +19,12 @@ public class Feet : MonoBehaviour {
 		player.GetComponent<BexPlayer>().SetIsGrounded( true );
 	}
 
+	void OnCollisionStay2D( Collision2D col )
+	{
+		if( !player.GetComponent<BexPlayer>().IsGrounded() )
+			player.GetComponent<BexPlayer>().SetIsGrounded( true );
+	}
+
 	void OnCollisionExit2D( Collision2D col )
 	{
 		player.GetComponent<BexPlayer>().SetIsGrounded( false );

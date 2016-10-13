@@ -173,13 +173,13 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 
 	void OnTriggerEnter2D( Collider2D col )
 	{
-		if (col.gameObject.tag == "Player")	// check if the player is in the trigger
+		if (col.gameObject.tag == "Player" && !col.isTrigger )	// check if the player is in the trigger
 			Activate();	// activate the object to run it's logic
 	}
 
 	void OnTriggerExit2D( Collider2D col )
 	{
-		if ( col.gameObject.tag == "Player" )	// if the player leaves the trigger volume
+		if ( col.gameObject.tag == "Player" && !col.isTrigger )	// if the player leaves the trigger volume
 		{
 			Activate();	// deactivate the object and stop running it's logic
 		}

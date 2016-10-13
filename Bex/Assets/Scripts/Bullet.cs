@@ -27,11 +27,14 @@ public class Bullet : MonoBehaviour {
 
 	void OnTriggerEnter2D( Collider2D col )
 	{
-		if ( col.gameObject.tag == "Enemy" && col.isTrigger == false )
+		if ( !col.isTrigger )
 		{
-			// damage the enemy
-			Debug.Log( "Bullet did " + damage + " damage to " + col.gameObject.name );
-			col.GetComponent<IDamageable>().TakeDamage( damage );
+			if ( col.gameObject.tag == "Enemy" && col.isTrigger == false )
+			{
+				// damage the enemy
+				Debug.Log( "Bullet did " + damage + " damage to " + col.gameObject.name );
+				col.GetComponent<IDamageable>().TakeDamage( damage );
+			}
 			Destroy( gameObject );
 		}
 	}

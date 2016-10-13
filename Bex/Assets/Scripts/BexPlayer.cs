@@ -23,7 +23,8 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	bool bIsGrounded;	// bool for if the character is currently on the ground
 	bool bIsDashing;	// bool for dashing
 	bool bIsKicking;    // bool for kicking
-	bool bDamagedRecently;	// bool for if we have recently taken damage
+	bool bDamagedRecently;  // bool for if we have recently taken damage
+	bool bIsDead;
 
 	// component variables
 	Rigidbody2D rb;	// rigidbody2d component
@@ -43,7 +44,7 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	
 	// Update is called once per frame
 	void Update () {
-        if ( !gameLogic.GetComponent<PauseMenu>().bIsPaused )
+        if ( !gameLogic.GetComponent<PauseMenu>().bIsPaused && !bIsDead )
         {
             MoveCharacter();
         }
@@ -59,6 +60,7 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 		bIsGrounded = true;
 		bIsDashing = false;
 		bIsKicking = false;
+		bIsDead = false;
 		timeLastFired = float.MinValue;
 		alphaOne = new Color( 1, 1, 1, 1 ); // Opaque alpha value
 		alphaHalf = new Color( 1, 1, 1, .5f );  // half transparent alpha value
@@ -254,6 +256,11 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 		return bIsFacingRight;
 	}
 
+	public bool IsGrounded()
+	{
+		return bIsGrounded;
+	}
+
 	// Got help with this function from Cameron Asbury. He talked me through how he did it in our Shmup project, I implemented it on my own in this project
 	void Blink()
 	{
@@ -309,5 +316,8 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 	public void Kill()
 	{
 		// player has been defeated
+		anim.SetBool( "bIsDead", true );
+		FindObjectOfType<PauseMenu>().GameOver();
+		bIsDead = true;
 	}
 }

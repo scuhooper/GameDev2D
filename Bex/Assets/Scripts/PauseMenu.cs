@@ -7,19 +7,33 @@ public class PauseMenu : MonoBehaviour {
     public bool bIsPaused;
     public GameObject pauseMenu;
     public GameObject controlsList;
+	public GameObject gameOverScreen;
+	public Text gameOverText;
+	public AudioSource victory;
+	public AudioSource defeat;
 
+	bool bGameWon;
+	bool bGameOver;
 	// Use this for initialization
 	void Start () {
         bIsPaused = false;
+		bGameWon = false;
+		bGameOver = false;
+		gameOverScreen.SetActive( false );
+		pauseMenu.SetActive( false );
+		controlsList.SetActive( false );
 	}
 	
 	// Update is called once per frame
 	void Update () {
         if ( Input.GetKeyDown( KeyCode.Escape ) )
         {
-            bIsPaused = true;
-            Time.timeScale = 0;
-            pauseMenu.SetActive( true );
+			if ( !bIsPaused && !bGameOver )
+			{
+				bIsPaused = true;
+				Time.timeScale = 0;
+				pauseMenu.SetActive( true );
+			}
         }
 	}
 
@@ -53,4 +67,37 @@ public class PauseMenu : MonoBehaviour {
     {
         Application.Quit();
     }
+
+	public void OnPlayAgainButtonClicked()
+	{
+		SceneManager.LoadScene( "LevelOne" );
+	}
+
+	void OnTriggerEnter2D( Collider2D col )
+	{
+		if ( col.gameObject.tag == "Player" )
+		{
+			// set game win condition
+			Time.timeScale = 0;
+			bGameWon = true;
+			GameOver();
+		}
+	}
+
+	public void GameOver()
+	{
+		bGameOver = true;
+		if ( bGameWon )
+		{
+			gameOverText.text = "Victory!!!";
+			victory.Play();
+		}
+		else
+		{
+			gameOverText.text = "Game Over";
+			defeat.Play();
+		}
+
+		gameOverScreen.SetActive( true );
+	}
 }

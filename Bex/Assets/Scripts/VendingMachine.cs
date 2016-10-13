@@ -94,7 +94,7 @@ public class VendingMachine : MonoBehaviour, IKillable, IDamageable {
 
 	void OnTriggerEnter2D( Collider2D col )
 	{
-		if ( col.gameObject.tag == "Player" )	// if the player is inside our trigger collider
+		if ( col.gameObject.tag == "Player" && !col.isTrigger )	// if the player is inside our trigger collider
 		{
 			Activate();	// set the object to active
 		}
@@ -102,7 +102,7 @@ public class VendingMachine : MonoBehaviour, IKillable, IDamageable {
 
 	void OnTriggerExit2D( Collider2D col )
 	{
-		if ( col.gameObject.tag == "Player" )	// if the player leaves our trigger collider
+		if ( col.gameObject.tag == "Player" && !col.isTrigger )	// if the player leaves our trigger collider
 			Activate();	// deactivate our object
 	}
 
