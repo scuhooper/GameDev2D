@@ -273,6 +273,12 @@ public class BexPlayer : MonoBehaviour, IKillable, IDamageable {
 		}
 	}
 
+	public void RefillHealth( int value )
+	{
+		health += value;
+		healthBar.value = health;
+	}
+
 	void OnTriggerEnter2D( Collider2D col )
 	{
 		if ( crouchKickCollider.enabled == true || jumpKickCollider.enabled == true )

@@ -4,12 +4,14 @@ using System.Collections;
 public class Forklift : MonoBehaviour, IKillable, IDamageable {
 	public int health;
 	public int damage;
-	public GameObject player;	// hook for player character in editor
+	public GameObject player;   // hook for player character in editor
+	public GameObject healthPickup;	// hook for health pickup in editor
 	public float chargeDuration;	// how long does the charge last
 	public float timeBetweenCharges;	// how often can we start a charge
 	public float chargeSpeed;   // how fast is the charge
 	public float maxChargeDistance; // how close does the player need to be to charge at them
 	public float blinkTime; // how long does the object blink
+	public float dropFrequency;	// how often does a health pickup drop (e.g. 10% is .1)
 	public AudioSource deathClip;	// editor hook for death noise
 
 	// basic state booleans
@@ -203,6 +205,10 @@ public class Forklift : MonoBehaviour, IKillable, IDamageable {
 		GetComponent<Animator>().SetTrigger( "ForkliftDestroyed" );
 		GetComponent<PolygonCollider2D>().enabled = false;	// disable the collider
 		rb.isKinematic = true;	// makes the rigidbody2D be kinematic so it doesn't fall through the ground
-		Destroy( gameObject, 1 );	// destroy object after 1 second delay
+		Destroy( gameObject, 1 );   // destroy object after 1 second delay
+		if ( Random.Range( 0f, 1f ) > 1 - dropFrequency )
+		{
+			Instantiate( healthPickup, transform.position, transform.rotation );
+		}
 	}
 }
