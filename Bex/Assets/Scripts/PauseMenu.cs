@@ -16,12 +16,7 @@ public class PauseMenu : MonoBehaviour {
 	bool bGameOver;
 	// Use this for initialization
 	void Start () {
-        bIsPaused = false;
-		bGameWon = false;
-		bGameOver = false;
-		gameOverScreen.SetActive( false );
-		pauseMenu.SetActive( false );
-		controlsList.SetActive( false );
+		Init();
 	}
 	
 	// Update is called once per frame
@@ -35,6 +30,17 @@ public class PauseMenu : MonoBehaviour {
 				pauseMenu.SetActive( true );
 			}
         }
+	}
+
+	void Init()
+	{
+		bIsPaused = false;
+		bGameWon = false;
+		bGameOver = false;
+		gameOverScreen.SetActive( false );
+		pauseMenu.SetActive( false );
+		controlsList.SetActive( false );
+		Time.timeScale = 1;
 	}
 
     public void OnResumeButtonClicked()
